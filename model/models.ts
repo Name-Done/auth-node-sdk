@@ -1,8 +1,10 @@
 import localVarRequest from 'request';
 
 export * from './badRequestResponseDto';
-export * from './loginUserRequestDto';
-export * from './loginUserResponseDto';
+export * from './loginRequestDto';
+export * from './loginResponseDto';
+export * from './refreshTokenRequestDto';
+export * from './refreshTokenResponseDto';
 export * from './unauthorizedResponseDto';
 
 import * as fs from 'fs';
@@ -19,8 +21,10 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
 import { BadRequestResponseDto } from './badRequestResponseDto';
-import { LoginUserRequestDto } from './loginUserRequestDto';
-import { LoginUserResponseDto } from './loginUserResponseDto';
+import { LoginRequestDto } from './loginRequestDto';
+import { LoginResponseDto } from './loginResponseDto';
+import { RefreshTokenRequestDto } from './refreshTokenRequestDto';
+import { RefreshTokenResponseDto } from './refreshTokenResponseDto';
 import { UnauthorizedResponseDto } from './unauthorizedResponseDto';
 
 /* tslint:disable:no-unused-variable */
@@ -40,8 +44,10 @@ let enumsMap: {[index: string]: any} = {
 
 let typeMap: {[index: string]: any} = {
     "BadRequestResponseDto": BadRequestResponseDto,
-    "LoginUserRequestDto": LoginUserRequestDto,
-    "LoginUserResponseDto": LoginUserResponseDto,
+    "LoginRequestDto": LoginRequestDto,
+    "LoginResponseDto": LoginResponseDto,
+    "RefreshTokenRequestDto": RefreshTokenRequestDto,
+    "RefreshTokenResponseDto": RefreshTokenResponseDto,
     "UnauthorizedResponseDto": UnauthorizedResponseDto,
 }
 

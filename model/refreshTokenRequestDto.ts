@@ -12,41 +12,23 @@
 
 import { RequestFile } from './models';
 
-export class BadRequestResponseDto {
+export class RefreshTokenRequestDto {
     /**
-    * HTTP status code of the error
+    * The refresh token to be used for generating new tokens.
     */
-    'statusCode': number;
-    /**
-    * Short descriptions of the errors
-    */
-    'message': Array<string>;
-    /**
-    * Error type
-    */
-    'error': string;
+    'refreshToken': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "statusCode",
-            "baseName": "statusCode",
-            "type": "number"
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "Array<string>"
-        },
-        {
-            "name": "error",
-            "baseName": "error",
+            "name": "refreshToken",
+            "baseName": "refreshToken",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return BadRequestResponseDto.attributeTypeMap;
+        return RefreshTokenRequestDto.attributeTypeMap;
     }
 }
 

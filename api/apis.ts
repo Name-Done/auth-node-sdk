@@ -1,5 +1,5 @@
-export * from './authApi';
-import { AuthApi } from './authApi';
+export * from './defaultApi';
+import { DefaultApi } from './defaultApi';
 import * as http from 'http';
 
 export class HttpError extends Error {
@@ -11,4 +11,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AuthApi];
+export const APIS = [DefaultApi];

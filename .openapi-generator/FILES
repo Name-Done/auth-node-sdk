@@ -1,12 +1,14 @@
 .gitignore
 api.ts
 api/apis.ts
-api/authApi.ts
+api/defaultApi.ts
 git_push.sh
 model/badRequestResponseDto.ts
-model/loginUserRequestDto.ts
-model/loginUserResponseDto.ts
+model/loginRequestDto.ts
+model/loginResponseDto.ts
 model/models.ts
+model/refreshTokenRequestDto.ts
+model/refreshTokenResponseDto.ts
 model/unauthorizedResponseDto.ts
 package.json
 tsconfig.json
