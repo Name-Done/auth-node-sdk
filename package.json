@@ -4,7 +4,7 @@
     "description": "NodeJS client for @name-done/auth-node-sdk",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Stable-Org/auth-node-sdk.git"
+        "url": "https://github.com/Name-Done/auth-node-sdk.git"
     },
     "main": "dist/api.js",
     "types": "dist/api.d.ts",
