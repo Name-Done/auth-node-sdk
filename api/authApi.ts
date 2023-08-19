@@ -16,6 +16,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { BadRequestResponseDto } from '../model/badRequestResponseDto';
+import { EmailConfirmationRequiredResponseDto } from '../model/emailConfirmationRequiredResponseDto';
 import { LoginRequestDto } from '../model/loginRequestDto';
 import { LoginResponseDto } from '../model/loginResponseDto';
 import { RefreshTokenRequestDto } from '../model/refreshTokenRequestDto';

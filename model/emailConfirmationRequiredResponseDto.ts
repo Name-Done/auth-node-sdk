@@ -12,41 +12,23 @@
 
 import { RequestFile } from './models';
 
-export class LoginRequestDto {
+export class EmailConfirmationRequiredResponseDto {
     /**
-    * The email of the user
+    * An informational message indicating the need for email confirmation
     */
-    'email': string;
-    /**
-    * The password of the user
-    */
-    'password': string;
-    /**
-    * The new password to set for the user (optional)
-    */
-    'newPassword'?: string;
+    'message': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "email",
-            "baseName": "email",
-            "type": "string"
-        },
-        {
-            "name": "password",
-            "baseName": "password",
-            "type": "string"
-        },
-        {
-            "name": "newPassword",
-            "baseName": "newPassword",
+            "name": "message",
+            "baseName": "message",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return LoginRequestDto.attributeTypeMap;
+        return EmailConfirmationRequiredResponseDto.attributeTypeMap;
     }
 }
 
