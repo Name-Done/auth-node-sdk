@@ -4,8 +4,9 @@ api.ts
 api/apis.ts
 api/authApi.ts
 git_push.sh
+model/acceptedResponseDto.ts
 model/badRequestResponseDto.ts
-model/emailConfirmationRequiredResponseDto.ts
+model/confirmRequestDto.ts
 model/loginRequestDto.ts
 model/loginResponseDto.ts
 model/models.ts
