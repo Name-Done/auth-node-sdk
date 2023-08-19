@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 
-export class LoginRequestDto {
+export class RegisterRequestDto {
     /**
     * The email of the user
     */
@@ -22,9 +22,21 @@ export class LoginRequestDto {
     */
     'password': string;
     /**
-    * The new password to set for the user (optional, minimum 8 characters)
+    * The given name of the user
     */
-    'newPassword'?: string;
+    'givenName': string;
+    /**
+    * The family name of the user
+    */
+    'familyName': string;
+    /**
+    * Gender query parameter
+    */
+    'gender'?: RegisterRequestDto.GenderEnum;
+    /**
+    * Acceptance of Terms and Privacy Policy
+    */
+    'acceptTerms': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,13 +52,34 @@ export class LoginRequestDto {
             "type": "string"
         },
         {
-            "name": "newPassword",
-            "baseName": "newPassword",
+            "name": "givenName",
+            "baseName": "givenName",
             "type": "string"
+        },
+        {
+            "name": "familyName",
+            "baseName": "familyName",
+            "type": "string"
+        },
+        {
+            "name": "gender",
+            "baseName": "gender",
+            "type": "RegisterRequestDto.GenderEnum"
+        },
+        {
+            "name": "acceptTerms",
+            "baseName": "acceptTerms",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return LoginRequestDto.attributeTypeMap;
+        return RegisterRequestDto.attributeTypeMap;
     }
 }
 
+export namespace RegisterRequestDto {
+    export enum GenderEnum {
+        Male = <any> 'male',
+        Female = <any> 'female'
+    }
+}

@@ -10,6 +10,7 @@ model/loginResponseDto.ts
 model/models.ts
 model/refreshTokenRequestDto.ts
 model/refreshTokenResponseDto.ts
+model/registerRequestDto.ts
 model/unauthorizedResponseDto.ts
 package.json
 tsconfig.json

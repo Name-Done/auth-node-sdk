@@ -5,6 +5,7 @@ export * from './loginRequestDto';
 export * from './loginResponseDto';
 export * from './refreshTokenRequestDto';
 export * from './refreshTokenResponseDto';
+export * from './registerRequestDto';
 export * from './unauthorizedResponseDto';
 
 import * as fs from 'fs';
@@ -25,6 +26,7 @@ import { LoginRequestDto } from './loginRequestDto';
 import { LoginResponseDto } from './loginResponseDto';
 import { RefreshTokenRequestDto } from './refreshTokenRequestDto';
 import { RefreshTokenResponseDto } from './refreshTokenResponseDto';
+import { RegisterRequestDto } from './registerRequestDto';
 import { UnauthorizedResponseDto } from './unauthorizedResponseDto';
 
 /* tslint:disable:no-unused-variable */
@@ -40,6 +42,7 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "RegisterRequestDto.GenderEnum": RegisterRequestDto.GenderEnum,
 }
 
 let typeMap: {[index: string]: any} = {
@@ -48,6 +51,7 @@ let typeMap: {[index: string]: any} = {
     "LoginResponseDto": LoginResponseDto,
     "RefreshTokenRequestDto": RefreshTokenRequestDto,
     "RefreshTokenResponseDto": RefreshTokenResponseDto,
+    "RegisterRequestDto": RegisterRequestDto,
     "UnauthorizedResponseDto": UnauthorizedResponseDto,
 }
 
