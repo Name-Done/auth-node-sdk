@@ -12,15 +12,19 @@
 
 import { RequestFile } from './models';
 
-export class ConfirmRequestDto {
+export class ConfirmForgotPasswordRequestDto {
     /**
     * The email of the user
     */
     'email': string;
     /**
-    * The confirmation code sent to the user\'s email
+    * The verification code sent to the email
     */
-    'code': string;
+    'verificationCode': string;
+    /**
+    * The password of the user
+    */
+    'newPassword': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -31,13 +35,18 @@ export class ConfirmRequestDto {
             "type": "string"
         },
         {
-            "name": "code",
-            "baseName": "code",
+            "name": "verificationCode",
+            "baseName": "verificationCode",
+            "type": "string"
+        },
+        {
+            "name": "newPassword",
+            "baseName": "newPassword",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ConfirmRequestDto.attributeTypeMap;
+        return ConfirmForgotPasswordRequestDto.attributeTypeMap;
     }
 }
 

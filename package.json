@@ -1,6 +1,6 @@
 {
     "name": "@name-done/auth-node-sdk",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "NodeJS client for @name-done/auth-node-sdk",
     "repository": {
         "type": "git",

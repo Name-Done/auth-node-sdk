@@ -12,23 +12,23 @@
 
 import { RequestFile } from './models';
 
-export class RefreshTokenRequestDto {
+export class ForgotPasswordRequestDto {
     /**
-    * The refresh token to be used for generating new tokens.
+    * The email of the user
     */
-    'refreshToken': string;
+    'email': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "refreshToken",
-            "baseName": "refreshToken",
+            "name": "email",
+            "baseName": "email",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return RefreshTokenRequestDto.attributeTypeMap;
+        return ForgotPasswordRequestDto.attributeTypeMap;
     }
 }
 
